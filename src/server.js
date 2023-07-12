@@ -13,13 +13,13 @@ mongodbPath = 'mongodb+srv://Siddhant:Sid123@mycluster.wxsharb.mongodb.net/?retr
 mongoose.connect(mongodbPath).then(function(){
 
   app.get('/', function(req, res){
-    res.json('API Works!')});
+    const response = {status-code: res.statusCode ,message : "API Works!"}
+    res.json(response)});
 
     const NotesRouter = require('./routes/NoteRoute');
   app.use('/Notes', NotesRouter)
 }
 );
-
 
 //port number to execute the server
 const Port = process.env.Port || 5000;
