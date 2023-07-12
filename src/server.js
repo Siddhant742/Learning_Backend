@@ -13,7 +13,7 @@ mongodbPath = 'mongodb+srv://Siddhant:Sid123@mycluster.wxsharb.mongodb.net/?retr
 mongoose.connect(mongodbPath).then(function(){
 
   app.get('/', function(req, res){
-    const response = {status-code: res.statusCode ,message : "API Works!"}
+    const response = {statuscode: res.statusCode ,message : "API Works!"}
     res.json(response)});
 
     const NotesRouter = require('./routes/NoteRoute');
